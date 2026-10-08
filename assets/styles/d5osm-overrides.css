@@ -1,0 +1,153 @@
+/**
+ * Small, deliberate overrides on top of vendored third-party CSS
+ * (esri-leaflet-geocoder, L.Control.Locate, ...) — kept in our own file
+ * instead of editing those directly, so a future update of the vendored
+ * files doesn't silently drop these.
+ */
+
+/* esri-leaflet-geocoder's .geocoder-control-suggestions dropdown ships with
+ * no z-index at all (position: absolute only). Leaflet's own controls
+ * (zoom, layers, locate...) sit in a pane stacked at z-index: 1000, which
+ * can render on top of and hide the suggestions list depending on DOM
+ * order — clicks meant for a suggestion then land on whatever control is
+ * actually on top instead. */
+.geocoder-control-suggestions {
+	z-index: 1001;
+}
+
+/* "Home" (reset view) control — our own custom L.Control, built with the
+ * same markup as Leaflet's default zoom control (.leaflet-bar a), which
+ * already sizes/borders the button; just center the inline SVG icon. */
+.d5osm-home-control a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Geolocation control — same .leaflet-bar a structure as the home button
+ * above, plus the pulsing "you are here" dot and the red crosshair-active
+ * state from the reference demo (leaflet.restezconnectes.fr/#49.location-button). */
+.d5osm-locate-button a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.d5osm-locate-button a.d5osm-locate-active {
+	color: #e4402f;
+}
+
+.d5osm-located-animation {
+	width: 17px;
+	height: 17px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	background: #2a93ee;
+	animation: d5osm-locate-pulse 2s infinite;
+}
+
+@keyframes d5osm-locate-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(42, 147, 238, .6);
+	}
+	70% {
+		box-shadow: 0 0 0 10px rgba(42, 147, 238, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(42, 147, 238, 0);
+	}
+}
+
+.d5osm-locate-message {
+	background: #fff;
+	padding: 4px 8px;
+	border-radius: 4px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+	font-size: 12px;
+}
+
+/* Sidebar replacing the marker popup — cf. reference demo
+ * (leaflet.restezconnectes.fr/#59.sidebar-replacing-popup), adapted to be
+ * scoped to this map's own wrapper instead of `<body>` classes, so several
+ * maps on the same page never interfere with each other. Built entirely in
+ * JS (d5osm-map-init.js's setupSidebar()), only when "Display Marker Info
+ * in Sidebar" is enabled — the default popup behaviour is untouched
+ * otherwise. */
+.d5osm_map_wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.d5osm_sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 340px;
+	height: 100%;
+	background: var(--d5osm-sidebar-bg, #fff);
+	color: var(--d5osm-sidebar-text, #333);
+	box-shadow: 0 0 14px rgba(0, 0, 0, .25);
+	z-index: 1000;
+	transform: translateX(-100%);
+	transition: transform .3s ease-in-out;
+	overflow-y: auto;
+	box-sizing: border-box;
+}
+
+.d5osm_map_wrapper.d5osm_sidebar_active .d5osm_sidebar {
+	transform: translateX(0);
+}
+
+.d5osm_sidebar_close {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 28px;
+	height: 28px;
+	border: none;
+	background: rgba(128, 128, 128, .2);
+	border-radius: 50%;
+	font-size: 18px;
+	line-height: 1;
+	cursor: pointer;
+	/* Suit la couleur de texte de la sidebar pour rester lisible sur un fond sombre. */
+	color: inherit;
+}
+
+.d5osm_sidebar_close:hover {
+	background: rgba(128, 128, 128, .35);
+}
+
+/* Liens du contenu (titre...) : même couleur que le texte de la sidebar, pas celle du thème. */
+.d5osm_sidebar_content a:not(.d5osm_readmore_button) {
+	color: inherit;
+	text-decoration: underline;
+}
+
+/* "Lire la suite" rendu en bouton dans la sidebar (couleurs : onglet Style > Sidebar). */
+.d5osm_sidebar_content .d5osm_readmore_button {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 8px 16px;
+	background: var(--d5osm-sidebar-btn-bg, #0052b1);
+	border: var(--d5osm-sidebar-btn-border-width, 1px) solid var(--d5osm-sidebar-btn-border, #0052b1);
+	color: var(--d5osm-sidebar-btn-text, #fff);
+	border-radius: 4px;
+	text-decoration: none;
+	line-height: 1.2;
+}
+
+.d5osm_sidebar_content .d5osm_readmore_button:hover {
+	opacity: .85;
+}
+
+.d5osm_sidebar_content {
+	padding: 40px 65px 16px;
+}
+
+.d5osm_sidebar_content .d5osm_thumb img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

@@ -1,0 +1,991 @@
+{
+  "name": "d5osm/openstreetmap-module-pin",
+  "textdomain": "d5-module-openstreetmap",
+  "title": "Pin",
+  "titles": "Pins",
+  "moduleIcon": "d5osm/module-openstreetmap",
+  "moduleClassName": "d5osm_openstreetmap_module_pin",
+  "moduleOrderClassName": "d5osm_openstreetmap_module_pin",
+  "category": "child-module",
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Pin"
+            }
+          }
+        }
+      },
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {},
+          "html": {}
+        }
+      }
+    },
+    "pinTitle": {
+      "type": "object",
+      "selector": "{{selector}} .d5osm_pin_title",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinContent",
+            "priority": 10,
+            "render": true,
+            "attrName": "pinTitle.innerContent",
+            "label": "Title",
+            "description": "Marker title displayed in the popup",
+            "features": {
+              "sticky": false,
+              "dynamicContent": {
+                "type": "text"
+              }
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      },
+      "tagName": "strong",
+      "attributes": {
+        "class": "d5osm_pin_title"
+      },
+      "inlineEditor": "plainText",
+      "elementType": "heading"
+    },
+    "pinContent": {
+      "type": "object",
+      "selector": "{{selector}} .d5osm_pin_content",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinContent",
+            "priority": 20,
+            "render": true,
+            "attrName": "pinContent.innerContent",
+            "label": "Content",
+            "description": "Popup content displayed below the title",
+            "features": {
+              "sticky": false,
+              "dynamicContent": {
+                "type": "text"
+              }
+            },
+            "component": {
+              "name": "divi/richtext",
+              "type": "field"
+            }
+          }
+        }
+      },
+      "tagName": "div",
+      "attributes": {
+        "class": "d5osm_pin_content"
+      },
+      "inlineEditor": "richText"
+    },
+    "pinLatitude": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "47.4"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinLocation",
+            "priority": 10,
+            "render": true,
+            "attrName": "pinLatitude.innerContent",
+            "label": "Latitude",
+            "description": "Marker latitude coordinate",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinLongitude": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "1.6"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinLocation",
+            "priority": 20,
+            "render": true,
+            "attrName": "pinLongitude.innerContent",
+            "label": "Longitude",
+            "description": "Marker longitude coordinate",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinIcon": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "default"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinMarker",
+            "priority": 10,
+            "render": true,
+            "attrName": "pinIcon.innerContent",
+            "label": "Marker Icon",
+            "description": "Choose marker icon",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/select",
+              "type": "field",
+              "props": {
+                "options": {
+                  "default": {
+                    "label": "Default"
+                  },
+                  "accountancy": {
+                    "label": "Accountancy"
+                  },
+                  "arts-crafts": {
+                    "label": "Arts Crafts"
+                  },
+                  "astrology": {
+                    "label": "Astrology"
+                  },
+                  "automotive": {
+                    "label": "Automotive"
+                  },
+                  "bars": {
+                    "label": "Bars"
+                  },
+                  "birds": {
+                    "label": "Birds"
+                  },
+                  "books-media": {
+                    "label": "Books Media"
+                  },
+                  "breakfast-n-brunch": {
+                    "label": "Breakfast & Brunch"
+                  },
+                  "business": {
+                    "label": "Business"
+                  },
+                  "cake-shop": {
+                    "label": "Cake Shop"
+                  },
+                  "clothings": {
+                    "label": "Clothings"
+                  },
+                  "clubs": {
+                    "label": "Clubs"
+                  },
+                  "coffee-n-tea": {
+                    "label": "Coffee & Tea"
+                  },
+                  "commercial-places": {
+                    "label": "Commercial Places"
+                  },
+                  "community": {
+                    "label": "Community"
+                  },
+                  "computers": {
+                    "label": "Computers"
+                  },
+                  "concerts": {
+                    "label": "Concerts"
+                  },
+                  "cookbooks": {
+                    "label": "Cookbooks"
+                  },
+                  "dance-clubs": {
+                    "label": "Dance Clubs"
+                  },
+                  "dental": {
+                    "label": "Dental"
+                  },
+                  "doctors": {
+                    "label": "Doctors"
+                  },
+                  "education": {
+                    "label": "Education"
+                  },
+                  "electronics": {
+                    "label": "Electronics"
+                  },
+                  "employment": {
+                    "label": "Employment"
+                  },
+                  "engineering": {
+                    "label": "Engineering"
+                  },
+                  "entertainment": {
+                    "label": "Entertainment"
+                  },
+                  "event": {
+                    "label": "Event"
+                  },
+                  "exhibitions": {
+                    "label": "Exhibitions"
+                  },
+                  "fashion": {
+                    "label": "Fashion"
+                  },
+                  "festivals": {
+                    "label": "Festivals"
+                  },
+                  "financial-services": {
+                    "label": "Financial Services"
+                  },
+                  "food": {
+                    "label": "Food"
+                  },
+                  "furniture-stores": {
+                    "label": "Furniture Stores"
+                  },
+                  "games": {
+                    "label": "Games"
+                  },
+                  "gifts-flowers": {
+                    "label": "Gifts Flowers"
+                  },
+                  "government": {
+                    "label": "Government"
+                  },
+                  "halloween": {
+                    "label": "Halloween"
+                  },
+                  "health-medical": {
+                    "label": "Health Medical"
+                  },
+                  "home-services": {
+                    "label": "Home Services"
+                  },
+                  "hotels": {
+                    "label": "Hotels"
+                  },
+                  "industries": {
+                    "label": "Industries"
+                  },
+                  "internet": {
+                    "label": "Internet"
+                  },
+                  "jewelry": {
+                    "label": "Jewelry"
+                  },
+                  "jobs": {
+                    "label": "Jobs"
+                  },
+                  "karaoke": {
+                    "label": "Karaoke"
+                  },
+                  "law": {
+                    "label": "Law"
+                  },
+                  "lawn-garden": {
+                    "label": "Lawn Garden"
+                  },
+                  "libraries": {
+                    "label": "Libraries"
+                  },
+                  "local-services": {
+                    "label": "Local Services"
+                  },
+                  "lounges": {
+                    "label": "Lounges"
+                  },
+                  "magazines": {
+                    "label": "Magazines"
+                  },
+                  "manufacturing": {
+                    "label": "Manufacturing"
+                  },
+                  "marker-new1_12": {
+                    "label": "Marker New"
+                  },
+                  "mass-media": {
+                    "label": "Mass Media"
+                  },
+                  "massage-therapy": {
+                    "label": "Massage Therapy"
+                  },
+                  "matrimonial": {
+                    "label": "Matrimonial"
+                  },
+                  "medical": {
+                    "label": "Medical"
+                  },
+                  "meetups": {
+                    "label": "Meetups"
+                  },
+                  "miscellaneous-for-sale": {
+                    "label": "Miscellaneous For Sale"
+                  },
+                  "mobile-phones": {
+                    "label": "Mobile Phones"
+                  },
+                  "movies": {
+                    "label": "Movies"
+                  },
+                  "museums": {
+                    "label": "Museums"
+                  },
+                  "musical-instruments": {
+                    "label": "Musical Instruments"
+                  },
+                  "musical": {
+                    "label": "Musical"
+                  },
+                  "nightlife": {
+                    "label": "Nightlife"
+                  },
+                  "parks": {
+                    "label": "Parks"
+                  },
+                  "parties": {
+                    "label": "Parties"
+                  },
+                  "pets": {
+                    "label": "Pets"
+                  },
+                  "photography": {
+                    "label": "Photography"
+                  },
+                  "pizza": {
+                    "label": "Pizza"
+                  },
+                  "places": {
+                    "label": "Places"
+                  },
+                  "play-schools": {
+                    "label": "Play Schools"
+                  },
+                  "playgrounds": {
+                    "label": "Playgrounds"
+                  },
+                  "pool-halls": {
+                    "label": "Pool Halls"
+                  },
+                  "printing-graphic-arts": {
+                    "label": "Printing Graphic Arts"
+                  },
+                  "professional": {
+                    "label": "Professional"
+                  },
+                  "real-estate": {
+                    "label": "Real Estate"
+                  },
+                  "religious-organizations": {
+                    "label": "Religious Organizations"
+                  },
+                  "residential-places": {
+                    "label": "Residential Places"
+                  },
+                  "restaurants": {
+                    "label": "Restaurants"
+                  },
+                  "retail-stores": {
+                    "label": "Retail Stores"
+                  },
+                  "saloon": {
+                    "label": "Saloon"
+                  },
+                  "schools": {
+                    "label": "Schools"
+                  },
+                  "science": {
+                    "label": "Science"
+                  },
+                  "shopping": {
+                    "label": "Shopping"
+                  },
+                  "sporting-goods": {
+                    "label": "Sporting Goods"
+                  },
+                  "sports": {
+                    "label": "Sports"
+                  },
+                  "swimming-pools": {
+                    "label": "Swimming Pools"
+                  },
+                  "telemarketing": {
+                    "label": "Telemarketing"
+                  },
+                  "tickets": {
+                    "label": "Tickets"
+                  },
+                  "tiffin-services": {
+                    "label": "Tiffin Services"
+                  },
+                  "tires-accessories": {
+                    "label": "Tires Accessories"
+                  },
+                  "tools-hardware": {
+                    "label": "Tools Hardware"
+                  },
+                  "tours": {
+                    "label": "Tours"
+                  },
+                  "toys-store": {
+                    "label": "Toys Store"
+                  },
+                  "transport": {
+                    "label": "Transport"
+                  },
+                  "travel": {
+                    "label": "Travel"
+                  },
+                  "tutors": {
+                    "label": "Tutors"
+                  },
+                  "vacant-land": {
+                    "label": "Vacant Land"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pinIconUrl": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinMarker",
+            "priority": 20,
+            "render": true,
+            "attrName": "pinIconUrl.innerContent",
+            "label": "Custom Icon URL",
+            "description": "Upload or enter URL for custom icon",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/upload",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinIconWidth": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "33"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinMarker",
+            "priority": 30,
+            "render": true,
+            "attrName": "pinIconWidth.innerContent",
+            "label": "Icon Width",
+            "description": "Icon width in pixels (10-200)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 10,
+                "max": 200,
+                "minLimit": 10,
+                "maxLimit": 200,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "pinIconHeight": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "44"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinMarker",
+            "priority": 40,
+            "render": true,
+            "attrName": "pinIconHeight.innerContent",
+            "label": "Icon Height",
+            "description": "Icon height in pixels (10-200)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 10,
+                "max": 200,
+                "minLimit": 10,
+                "maxLimit": 200,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "showReadMore": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "on"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinReadMore",
+            "priority": 10,
+            "render": true,
+            "attrName": "showReadMore.innerContent",
+            "label": "Show Read More Link",
+            "description": "Display read more link in popup",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "readMoreText": {
+      "type": "object",
+      "selector": "{{selector}} .d5osm_readmore",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "Read More..."
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinReadMore",
+            "priority": 20,
+            "render": true,
+            "attrName": "readMoreText.innerContent",
+            "label": "Read More Text",
+            "description": "Text for read more link",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      },
+      "tagName": "a",
+      "attributes": {
+        "class": "d5osm_readmore"
+      },
+      "inlineEditor": "plainText"
+    },
+    "readMoreClass": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "pinReadMore",
+            "priority": 30,
+            "render": true,
+            "attrName": "readMoreClass.innerContent",
+            "label": "Read More Link Class",
+            "description": "Enter a custom CSS class for the Read More link.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinSidebarBgColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 10,
+            "render": true,
+            "attrName": "pinSidebarBgColor.innerContent",
+            "label": "Sidebar Background Color",
+            "description": "Overrides the map's sidebar background color for this pin only. Leave empty to use the map's setting.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinSidebarTextColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 20,
+            "render": true,
+            "attrName": "pinSidebarTextColor.innerContent",
+            "label": "Sidebar Text Color",
+            "description": "Overrides the map's sidebar text color for this pin only. Leave empty to use the map's setting.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinSidebarButtonBgColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 30,
+            "render": true,
+            "attrName": "pinSidebarButtonBgColor.innerContent",
+            "label": "Read More Button Background Color",
+            "description": "Overrides the map's Read More button background color for this pin only. Leave empty to use the map's setting.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinSidebarButtonBorderColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 40,
+            "render": true,
+            "attrName": "pinSidebarButtonBorderColor.innerContent",
+            "label": "Read More Button Border Color",
+            "description": "Overrides the map's Read More button border color for this pin only. Leave empty to use the map's setting.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "pinSidebarButtonBorderWidth": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 45,
+            "render": true,
+            "attrName": "pinSidebarButtonBorderWidth.innerContent",
+            "label": "Read More Button Border Width",
+            "description": "Overrides the map's Read More button border thickness for this pin only, in pixels. Leave empty to use the map's setting.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 0,
+                "max": 20,
+                "minLimit": 0,
+                "maxLimit": 20,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "pinSidebarButtonTextColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 50,
+            "render": true,
+            "attrName": "pinSidebarButtonTextColor.innerContent",
+            "label": "Read More Button Text Color",
+            "description": "Overrides the map's Read More button text color for this pin only. Leave empty to use the map's setting.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {},
+  "settings": {
+    "content": "auto",
+    "groups": {
+      "pinContent": {
+        "panel": "content",
+        "priority": 10,
+        "groupName": "pinContent",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        }
+      },
+      "pinLocation": {
+        "panel": "content",
+        "priority": 20,
+        "groupName": "pinLocation",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Location"
+          }
+        }
+      },
+      "pinMarker": {
+        "panel": "content",
+        "priority": 30,
+        "groupName": "pinMarker",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Marker"
+          }
+        }
+      },
+      "pinReadMore": {
+        "panel": "content",
+        "priority": 40,
+        "groupName": "pinReadMore",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Read More"
+          }
+        }
+      },
+      "designSidebar": {
+        "panel": "design",
+        "priority": 5,
+        "groupName": "designSidebar",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "clipboardCategory": "style",
+            "groupLabel": "Sidebar"
+          }
+        }
+      }
+    }
+  }
+}

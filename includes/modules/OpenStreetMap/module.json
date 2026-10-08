@@ -1,0 +1,1780 @@
+{
+  "name": "d5osm/openstreetmap-module",
+  "textdomain": "d5-module-openstreetmap",
+  "title": "OpenStreetMap",
+  "titles": "OpenStreetMap Modules",
+  "moduleIcon": "d5osm/module-openstreetmap",
+  "moduleClassName": "d5osm_openstreetmap_module",
+  "moduleOrderClassName": "d5osm_openstreetmap_module",
+  "category": "module",
+  "childModuleName": "d5osm/openstreetmap-module-pin",
+  "childModuleTitle": "Pin",
+  "childrenName": [
+    "d5osm/openstreetmap-module-pin"
+  ],
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "OpenStreetMap"
+            }
+          }
+        }
+      },
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {},
+          "text": {},
+          "htmlAttributes": {}
+        },
+        "decoration": {
+          "background": {},
+          "sizing": {},
+          "spacing": {},
+          "border": {},
+          "boxShadow": {},
+          "filters": {},
+          "transform": {},
+          "animation": {},
+          "overflow": {},
+          "disabledOn": {},
+          "transition": {},
+          "position": {},
+          "zIndex": {},
+          "scroll": {},
+          "sticky": {}
+        }
+      }
+    },
+    "mapHeight": {
+      "type": "object",
+      "selector": "{{selector}} .d5osm_map_container",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "350"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapSettings",
+            "priority": 5,
+            "render": true,
+            "attrName": "mapHeight.innerContent",
+            "label": "Map Height",
+            "description": "Height of the map container in pixels (80-1000px)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 80,
+                "max": 1000,
+                "minLimit": 80,
+                "maxLimit": 1000,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "latitude": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "47.4"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapSettings",
+            "priority": 10,
+            "render": true,
+            "attrName": "latitude.innerContent",
+            "label": "Default Latitude",
+            "description": "Default latitude for maps. You can get coordinates here: https://madeby.restezconnectes.fr/lieux-et-coordonnees/",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "longitude": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "1.6"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapSettings",
+            "priority": 20,
+            "render": true,
+            "attrName": "longitude.innerContent",
+            "label": "Default Longitude",
+            "description": "Default longitude for maps. You can get coordinates here: https://madeby.restezconnectes.fr/lieux-et-coordonnees/",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "zoom": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "5.5"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapSettings",
+            "priority": 30,
+            "render": true,
+            "attrName": "zoom.innerContent",
+            "label": "Default Zoom",
+            "description": "Default zoom level for maps (0-18)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 0,
+                "max": 18,
+                "minLimit": 0,
+                "maxLimit": 18,
+                "step": 0.5,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseLayer": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapSettings",
+            "priority": 40,
+            "render": true,
+            "attrName": "baseLayer.innerContent",
+            "label": "Base Layer",
+            "description": "Choose the base map layer",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/select",
+              "type": "field",
+              "props": {
+                "options": {
+                  "https://{s}.tile.osm.org/{z}/{x}/{y}.png": {
+                    "label": "OpenStreetMap's Standard"
+                  },
+                  "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png": {
+                    "label": "OpenStreetMap France"
+                  },
+                  "https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png": {
+                    "label": "Humanitarian map style"
+                  },
+                  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}": {
+                    "label": "Satellite"
+                  },
+                  "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png": {
+                    "label": "CyclOSM"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "displaySidebar": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapSettings",
+            "priority": 50,
+            "render": true,
+            "attrName": "displaySidebar.innerContent",
+            "label": "Display Marker Info in Sidebar",
+            "description": "Show marker content in a sliding sidebar panel instead of a popup bubble",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "sidebarBgColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "#ffffff"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 10,
+            "render": true,
+            "attrName": "sidebarBgColor.innerContent",
+            "label": "Sidebar Background Color",
+            "description": "Background color of the marker sidebar (only used when \"Display Marker Info in Sidebar\" is enabled).",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "sidebarTextColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "#333333"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 20,
+            "render": true,
+            "attrName": "sidebarTextColor.innerContent",
+            "label": "Sidebar Text Color",
+            "description": "Text color of the marker content shown in the sidebar.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "sidebarButtonBgColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "#0052b1"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 30,
+            "render": true,
+            "attrName": "sidebarButtonBgColor.innerContent",
+            "label": "Read More Button Background Color",
+            "description": "Background color of the Read More button in the sidebar (replaces the plain Read More link shown in a popup).",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "sidebarButtonBorderColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "#0052b1"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 40,
+            "render": true,
+            "attrName": "sidebarButtonBorderColor.innerContent",
+            "label": "Read More Button Border Color",
+            "description": "Border color of the Read More button in the sidebar.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "sidebarButtonBorderWidth": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "1"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 45,
+            "render": true,
+            "attrName": "sidebarButtonBorderWidth.innerContent",
+            "label": "Read More Button Border Width",
+            "description": "Border thickness of the Read More button in the sidebar, in pixels (0 for no border).",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 0,
+                "max": 20,
+                "minLimit": 0,
+                "maxLimit": 20,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "sidebarButtonTextColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "#ffffff"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "designSidebar",
+            "priority": 50,
+            "render": true,
+            "attrName": "sidebarButtonTextColor.innerContent",
+            "label": "Read More Button Text Color",
+            "description": "Text color of the Read More button in the sidebar.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/color-picker",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "showZoomControls": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "on"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 10,
+            "render": true,
+            "attrName": "showZoomControls.innerContent",
+            "label": "Show Zoom Controls",
+            "description": "Display zoom control buttons on the map",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "scrollWheelZoom": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 20,
+            "render": true,
+            "attrName": "scrollWheelZoom.innerContent",
+            "label": "Scroll Wheel Zoom",
+            "description": "Enable zoom with mouse scroll wheel",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "doubleClickZoom": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 30,
+            "render": true,
+            "attrName": "doubleClickZoom.innerContent",
+            "label": "Double Click Zoom",
+            "description": "Enable zoom with double click",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "minZoom": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "0"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 40,
+            "render": true,
+            "attrName": "minZoom.innerContent",
+            "label": "Minimum Zoom",
+            "description": "Minimum zoom level (0-18)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 0,
+                "max": 18,
+                "minLimit": 0,
+                "maxLimit": 18,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "maxZoom": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "18"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 50,
+            "render": true,
+            "attrName": "maxZoom.innerContent",
+            "label": "Maximum Zoom",
+            "description": "Maximum zoom level (0-18)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 0,
+                "max": 18,
+                "minLimit": 0,
+                "maxLimit": 18,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "fitMarkers": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 60,
+            "render": true,
+            "attrName": "fitMarkers.innerContent",
+            "label": "Fit Markers",
+            "description": "Automatically adjust map view to fit all markers",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "controlLayers": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 70,
+            "render": true,
+            "attrName": "controlLayers.innerContent",
+            "label": "Display Base Layers Control",
+            "description": "Show layer switcher control",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "displaySearch": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 80,
+            "render": true,
+            "attrName": "displaySearch.innerContent",
+            "label": "Display Search",
+            "description": "Show geocoding search control",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "searchMarkerColor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "color": "#fe6c58"
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "background": {
+            "priority": 10,
+            "component": {
+              "props": {
+                "groupLabel": "Search Marker Color",
+                "fieldLabel": "Color"
+              }
+            }
+          }
+        }
+      }
+    },
+    "displayMinimap": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 90,
+            "render": true,
+            "attrName": "displayMinimap.innerContent",
+            "label": "Display MiniMap",
+            "description": "Show minimap control",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "displayLocation": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 100,
+            "render": true,
+            "attrName": "displayLocation.innerContent",
+            "label": "Geolocate User",
+            "description": "Show user geolocation control",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "displayHomeButton": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "mapControls",
+            "priority": 110,
+            "render": true,
+            "attrName": "displayHomeButton.innerContent",
+            "label": "Display Home Button",
+            "description": "Show a button that resets the map to its initial position and zoom",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "defaultMarkerIcon": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "default"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "markerSettings",
+            "priority": 10,
+            "render": true,
+            "attrName": "defaultMarkerIcon.innerContent",
+            "label": "Default Marker Icon",
+            "description": "Choose default marker icon",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/select",
+              "type": "field",
+              "props": {
+                "options": {
+                  "default": {
+                    "label": "Default"
+                  },
+                  "accountancy": {
+                    "label": "Accountancy"
+                  },
+                  "arts-crafts": {
+                    "label": "Arts Crafts"
+                  },
+                  "astrology": {
+                    "label": "Astrology"
+                  },
+                  "automotive": {
+                    "label": "Automotive"
+                  },
+                  "bars": {
+                    "label": "Bars"
+                  },
+                  "birds": {
+                    "label": "Birds"
+                  },
+                  "books-media": {
+                    "label": "Books Media"
+                  },
+                  "breakfast-n-brunch": {
+                    "label": "Breakfast & Brunch"
+                  },
+                  "business": {
+                    "label": "Business"
+                  },
+                  "cake-shop": {
+                    "label": "Cake Shop"
+                  },
+                  "clothings": {
+                    "label": "Clothings"
+                  },
+                  "clubs": {
+                    "label": "Clubs"
+                  },
+                  "coffee-n-tea": {
+                    "label": "Coffee & Tea"
+                  },
+                  "commercial-places": {
+                    "label": "Commercial Places"
+                  },
+                  "community": {
+                    "label": "Community"
+                  },
+                  "computers": {
+                    "label": "Computers"
+                  },
+                  "concerts": {
+                    "label": "Concerts"
+                  },
+                  "cookbooks": {
+                    "label": "Cookbooks"
+                  },
+                  "dance-clubs": {
+                    "label": "Dance Clubs"
+                  },
+                  "dental": {
+                    "label": "Dental"
+                  },
+                  "doctors": {
+                    "label": "Doctors"
+                  },
+                  "education": {
+                    "label": "Education"
+                  },
+                  "electronics": {
+                    "label": "Electronics"
+                  },
+                  "employment": {
+                    "label": "Employment"
+                  },
+                  "engineering": {
+                    "label": "Engineering"
+                  },
+                  "entertainment": {
+                    "label": "Entertainment"
+                  },
+                  "event": {
+                    "label": "Event"
+                  },
+                  "exhibitions": {
+                    "label": "Exhibitions"
+                  },
+                  "fashion": {
+                    "label": "Fashion"
+                  },
+                  "festivals": {
+                    "label": "Festivals"
+                  },
+                  "financial-services": {
+                    "label": "Financial Services"
+                  },
+                  "food": {
+                    "label": "Food"
+                  },
+                  "furniture-stores": {
+                    "label": "Furniture Stores"
+                  },
+                  "games": {
+                    "label": "Games"
+                  },
+                  "gifts-flowers": {
+                    "label": "Gifts Flowers"
+                  },
+                  "government": {
+                    "label": "Government"
+                  },
+                  "halloween": {
+                    "label": "Halloween"
+                  },
+                  "health-medical": {
+                    "label": "Health Medical"
+                  },
+                  "home-services": {
+                    "label": "Home Services"
+                  },
+                  "hotels": {
+                    "label": "Hotels"
+                  },
+                  "industries": {
+                    "label": "Industries"
+                  },
+                  "internet": {
+                    "label": "Internet"
+                  },
+                  "jewelry": {
+                    "label": "Jewelry"
+                  },
+                  "jobs": {
+                    "label": "Jobs"
+                  },
+                  "karaoke": {
+                    "label": "Karaoke"
+                  },
+                  "law": {
+                    "label": "Law"
+                  },
+                  "lawn-garden": {
+                    "label": "Lawn Garden"
+                  },
+                  "libraries": {
+                    "label": "Libraries"
+                  },
+                  "local-services": {
+                    "label": "Local Services"
+                  },
+                  "lounges": {
+                    "label": "Lounges"
+                  },
+                  "magazines": {
+                    "label": "Magazines"
+                  },
+                  "manufacturing": {
+                    "label": "Manufacturing"
+                  },
+                  "marker-new1_12": {
+                    "label": "Marker New"
+                  },
+                  "mass-media": {
+                    "label": "Mass Media"
+                  },
+                  "massage-therapy": {
+                    "label": "Massage Therapy"
+                  },
+                  "matrimonial": {
+                    "label": "Matrimonial"
+                  },
+                  "medical": {
+                    "label": "Medical"
+                  },
+                  "meetups": {
+                    "label": "Meetups"
+                  },
+                  "miscellaneous-for-sale": {
+                    "label": "Miscellaneous For Sale"
+                  },
+                  "mobile-phones": {
+                    "label": "Mobile Phones"
+                  },
+                  "movies": {
+                    "label": "Movies"
+                  },
+                  "museums": {
+                    "label": "Museums"
+                  },
+                  "musical-instruments": {
+                    "label": "Musical Instruments"
+                  },
+                  "musical": {
+                    "label": "Musical"
+                  },
+                  "nightlife": {
+                    "label": "Nightlife"
+                  },
+                  "parks": {
+                    "label": "Parks"
+                  },
+                  "parties": {
+                    "label": "Parties"
+                  },
+                  "pets": {
+                    "label": "Pets"
+                  },
+                  "photography": {
+                    "label": "Photography"
+                  },
+                  "pizza": {
+                    "label": "Pizza"
+                  },
+                  "places": {
+                    "label": "Places"
+                  },
+                  "play-schools": {
+                    "label": "Play Schools"
+                  },
+                  "playgrounds": {
+                    "label": "Playgrounds"
+                  },
+                  "pool-halls": {
+                    "label": "Pool Halls"
+                  },
+                  "printing-graphic-arts": {
+                    "label": "Printing Graphic Arts"
+                  },
+                  "professional": {
+                    "label": "Professional"
+                  },
+                  "real-estate": {
+                    "label": "Real Estate"
+                  },
+                  "religious-organizations": {
+                    "label": "Religious Organizations"
+                  },
+                  "residential-places": {
+                    "label": "Residential Places"
+                  },
+                  "restaurants": {
+                    "label": "Restaurants"
+                  },
+                  "retail-stores": {
+                    "label": "Retail Stores"
+                  },
+                  "saloon": {
+                    "label": "Saloon"
+                  },
+                  "schools": {
+                    "label": "Schools"
+                  },
+                  "science": {
+                    "label": "Science"
+                  },
+                  "shopping": {
+                    "label": "Shopping"
+                  },
+                  "sporting-goods": {
+                    "label": "Sporting Goods"
+                  },
+                  "sports": {
+                    "label": "Sports"
+                  },
+                  "swimming-pools": {
+                    "label": "Swimming Pools"
+                  },
+                  "telemarketing": {
+                    "label": "Telemarketing"
+                  },
+                  "tickets": {
+                    "label": "Tickets"
+                  },
+                  "tiffin-services": {
+                    "label": "Tiffin Services"
+                  },
+                  "tires-accessories": {
+                    "label": "Tires Accessories"
+                  },
+                  "tools-hardware": {
+                    "label": "Tools Hardware"
+                  },
+                  "tours": {
+                    "label": "Tours"
+                  },
+                  "toys-store": {
+                    "label": "Toys Store"
+                  },
+                  "transport": {
+                    "label": "Transport"
+                  },
+                  "travel": {
+                    "label": "Travel"
+                  },
+                  "tutors": {
+                    "label": "Tutors"
+                  },
+                  "vacant-land": {
+                    "label": "Vacant Land"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "defaultMarkerIconUrl": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "markerSettings",
+            "priority": 20,
+            "render": true,
+            "attrName": "defaultMarkerIconUrl.innerContent",
+            "label": "Custom Marker Icon URL",
+            "description": "Upload or enter URL for custom marker icon",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/upload",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "defaultMarkerIconWidth": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "33"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "markerSettings",
+            "priority": 30,
+            "render": true,
+            "attrName": "defaultMarkerIconWidth.innerContent",
+            "label": "Marker Icon Width",
+            "description": "Width of marker icon in pixels (10-200)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 10,
+                "max": 200,
+                "minLimit": 10,
+                "maxLimit": 200,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "defaultMarkerIconHeight": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "44"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "markerSettings",
+            "priority": 40,
+            "render": true,
+            "attrName": "defaultMarkerIconHeight.innerContent",
+            "label": "Marker Icon Height",
+            "description": "Height of marker icon in pixels (10-200)",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/range",
+              "type": "field",
+              "props": {
+                "min": 10,
+                "max": 200,
+                "minLimit": 10,
+                "maxLimit": 200,
+                "step": 1,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "cptMarkers": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 10,
+            "render": true,
+            "attrName": "cptMarkers.innerContent",
+            "label": "Enable Markers for Custom Post Type",
+            "description": "If enabled, all published posts of the chosen post type are added to the map as markers.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "cptPostType": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 20,
+            "render": true,
+            "attrName": "cptPostType.innerContent",
+            "label": "Custom Post Type",
+            "description": "Choose which Custom Post Type to display on the map (only if CPT markers is enabled).",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/select",
+              "type": "field",
+              "props": {
+                "options": {
+                  "": {
+                    "label": "Choose"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cptTaxonomy": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 30,
+            "render": true,
+            "attrName": "cptTaxonomy.innerContent",
+            "label": "Filter by Taxonomy",
+            "description": "Choose which taxonomy to filter the posts by (leave on \"Choose\" for no taxonomy filter).",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/select",
+              "type": "field",
+              "props": {
+                "options": {
+                  "": {
+                    "label": "Choose"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cptTerms": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 40,
+            "render": true,
+            "attrName": "cptTerms.innerContent",
+            "label": "Taxonomy Terms",
+            "description": "Comma-separated term slugs to filter by. Leave empty to include every term.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "thumbMarkers": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 50,
+            "render": true,
+            "attrName": "thumbMarkers.innerContent",
+            "label": "Show Thumbnails",
+            "description": "Display the featured image of each post inside its marker popup.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "cptExcerpt": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 60,
+            "render": true,
+            "attrName": "cptExcerpt.innerContent",
+            "label": "Use Excerpt for Markers",
+            "description": "Use the post excerpt as the popup content instead of the custom marker text.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "cptShowReadmore": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "on"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 70,
+            "render": true,
+            "attrName": "cptShowReadmore.innerContent",
+            "label": "Show Read More Button",
+            "description": "Display a Read More link inside the marker popup.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "cptReadmoreText": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "Read More..."
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 80,
+            "render": true,
+            "attrName": "cptReadmoreText.innerContent",
+            "label": "Read More Text",
+            "description": "Text used for the Read More link.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "cptReadmoreTarget": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "_blank"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 90,
+            "render": true,
+            "attrName": "cptReadmoreTarget.innerContent",
+            "label": "Link Target",
+            "description": "Where the post link and Read More link should open.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/select",
+              "type": "field",
+              "props": {
+                "options": {
+                  "_blank": {
+                    "label": "New Tab"
+                  },
+                  "_self": {
+                    "label": "Same Tab"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cptMapSingle": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 100,
+            "render": true,
+            "attrName": "cptMapSingle.innerContent",
+            "label": "Display All Markers on Single Post Page",
+            "description": "When viewing a single post of this CPT, show every marker instead of only the current post's marker.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    },
+    "showMarkersOnly": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "cptSettings",
+            "priority": 110,
+            "render": true,
+            "attrName": "showMarkersOnly.innerContent",
+            "label": "Show Markers Only",
+            "description": "Display only markers without popup for the CPT markers.",
+            "features": {
+              "sticky": false,
+              "dynamicContent": false
+            },
+            "component": {
+              "name": "divi/toggle",
+              "type": "field"
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {
+    "mapContainer": {
+      "subName": "mapContainer",
+      "selectorSuffix": " .d5osm_map_container"
+    }
+  },
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "mapSettings": {
+        "panel": "content",
+        "priority": 10,
+        "groupName": "mapSettings",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Map Settings"
+          }
+        }
+      },
+      "mapControls": {
+        "panel": "content",
+        "priority": 20,
+        "groupName": "mapControls",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Map Controls"
+          }
+        }
+      },
+      "designSidebar": {
+        "panel": "design",
+        "priority": 5,
+        "groupName": "designSidebar",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "clipboardCategory": "style",
+            "groupLabel": "Sidebar"
+          }
+        }
+      },
+      "markerSettings": {
+        "panel": "content",
+        "priority": 30,
+        "groupName": "markerSettings",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Default Marker Settings"
+          }
+        }
+      },
+      "cptSettings": {
+        "panel": "content",
+        "priority": 40,
+        "groupName": "cptSettings",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Post Type Markers"
+          }
+        }
+      }
+    }
+  }
+}

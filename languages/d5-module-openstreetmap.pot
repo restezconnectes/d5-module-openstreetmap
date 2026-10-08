@@ -1,0 +1,742 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Module OpenStreetMap for Divi 5 1.0.0\n"
+"Report-Msgid-Bugs-To: https://madeby.restezconnectes.fr/project/module-divi-openstreetmap/\n"
+"POT-Creation-Date: 2026-09-19 08:00+0000\n"
+"PO-Revision-Date: 2026-09-19 08:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: manual\n"
+"X-Domain: d5-module-openstreetmap\n"
+
+msgid "Read More..."
+msgstr ""
+
+msgid "Search for places or addresses"
+msgstr ""
+
+msgid "OpenStreetMap"
+msgstr ""
+
+msgid "OpenStreetMap Modules"
+msgstr ""
+
+msgid "Pin"
+msgstr ""
+
+msgid "Map Height"
+msgstr ""
+
+msgid "Height of the map container in pixels (80-1000px)"
+msgstr ""
+
+msgid "Default Latitude"
+msgstr ""
+
+msgid "Default latitude for maps. You can get coordinates here: https://madeby.restezconnectes.fr/lieux-et-coordonnees/"
+msgstr ""
+
+msgid "Default Longitude"
+msgstr ""
+
+msgid "Default longitude for maps. You can get coordinates here: https://madeby.restezconnectes.fr/lieux-et-coordonnees/"
+msgstr ""
+
+msgid "Default Zoom"
+msgstr ""
+
+msgid "Default zoom level for maps (0-18)"
+msgstr ""
+
+msgid "Base Layer"
+msgstr ""
+
+msgid "Choose the base map layer"
+msgstr ""
+
+msgid "OpenStreetMap's Standard"
+msgstr ""
+
+msgid "OpenStreetMap France"
+msgstr ""
+
+msgid "Humanitarian map style"
+msgstr ""
+
+msgid "Satellite"
+msgstr ""
+
+msgid "CyclOSM"
+msgstr ""
+
+msgid "Display Marker Info in Sidebar"
+msgstr ""
+
+msgid "Show marker content in a sliding sidebar panel instead of a popup bubble"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Sidebar"
+msgstr ""
+
+msgid "Sidebar Background Color"
+msgstr ""
+
+msgid "Background color of the marker sidebar (only used when \"Display Marker Info in Sidebar\" is enabled)."
+msgstr ""
+
+msgid "Sidebar Text Color"
+msgstr ""
+
+msgid "Text color of the marker content shown in the sidebar."
+msgstr ""
+
+msgid "Read More Button Background Color"
+msgstr ""
+
+msgid "Background color of the Read More button in the sidebar (replaces the plain Read More link shown in a popup)."
+msgstr ""
+
+msgid "Read More Button Border Color"
+msgstr ""
+
+msgid "Border color of the Read More button in the sidebar."
+msgstr ""
+
+msgid "Read More Button Text Color"
+msgstr ""
+
+msgid "Read More Button Border Width"
+msgstr ""
+
+msgid "Border thickness of the Read More button in the sidebar, in pixels (0 for no border)."
+msgstr ""
+
+msgid "Overrides the map's Read More button border thickness for this pin only, in pixels. Leave empty to use the map's setting."
+msgstr ""
+
+msgid "Text color of the Read More button in the sidebar."
+msgstr ""
+
+msgid "Overrides the map's sidebar background color for this pin only. Leave empty to use the map's setting."
+msgstr ""
+
+msgid "Overrides the map's sidebar text color for this pin only. Leave empty to use the map's setting."
+msgstr ""
+
+msgid "Overrides the map's Read More button background color for this pin only. Leave empty to use the map's setting."
+msgstr ""
+
+msgid "Overrides the map's Read More button border color for this pin only. Leave empty to use the map's setting."
+msgstr ""
+
+msgid "Overrides the map's Read More button text color for this pin only. Leave empty to use the map's setting."
+msgstr ""
+
+msgid "Show Zoom Controls"
+msgstr ""
+
+msgid "Display zoom control buttons on the map"
+msgstr ""
+
+msgid "Scroll Wheel Zoom"
+msgstr ""
+
+msgid "Enable zoom with mouse scroll wheel"
+msgstr ""
+
+msgid "Double Click Zoom"
+msgstr ""
+
+msgid "Enable zoom with double click"
+msgstr ""
+
+msgid "Minimum Zoom"
+msgstr ""
+
+msgid "Minimum zoom level (0-18)"
+msgstr ""
+
+msgid "Maximum Zoom"
+msgstr ""
+
+msgid "Maximum zoom level (0-18)"
+msgstr ""
+
+msgid "Fit Markers"
+msgstr ""
+
+msgid "Automatically adjust map view to fit all markers"
+msgstr ""
+
+msgid "Display Base Layers Control"
+msgstr ""
+
+msgid "Show layer switcher control"
+msgstr ""
+
+msgid "Display Search"
+msgstr ""
+
+msgid "Show geocoding search control"
+msgstr ""
+
+msgid "Search Marker Color"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Display MiniMap"
+msgstr ""
+
+msgid "Show minimap control"
+msgstr ""
+
+msgid "Geolocate User"
+msgstr ""
+
+msgid "Show user geolocation control"
+msgstr ""
+
+msgid "Display Home Button"
+msgstr ""
+
+msgid "Show a button that resets the map to its initial position and zoom"
+msgstr ""
+
+msgid "Reset view"
+msgstr ""
+
+msgid "Locate me"
+msgstr ""
+
+msgid "Location access denied."
+msgstr ""
+
+msgid "Search a place to fill in coordinates…"
+msgstr ""
+
+msgid "Open this pin's settings panel first, then pick a search result."
+msgstr ""
+
+msgid "Could not find coordinates for that place."
+msgstr ""
+
+msgid "Search Location"
+msgstr ""
+
+msgid "Search a place to fill in the Latitude/Longitude fields below."
+msgstr ""
+
+msgid "Zoom in"
+msgstr ""
+
+msgid "Zoom out"
+msgstr ""
+
+msgid "Default Marker Icon"
+msgstr ""
+
+msgid "Choose default marker icon"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Accountancy"
+msgstr ""
+
+msgid "Arts Crafts"
+msgstr ""
+
+msgid "Astrology"
+msgstr ""
+
+msgid "Automotive"
+msgstr ""
+
+msgid "Bars"
+msgstr ""
+
+msgid "Birds"
+msgstr ""
+
+msgid "Books Media"
+msgstr ""
+
+msgid "Breakfast & Brunch"
+msgstr ""
+
+msgid "Business"
+msgstr ""
+
+msgid "Cake Shop"
+msgstr ""
+
+msgid "Clothings"
+msgstr ""
+
+msgid "Clubs"
+msgstr ""
+
+msgid "Coffee & Tea"
+msgstr ""
+
+msgid "Commercial Places"
+msgstr ""
+
+msgid "Community"
+msgstr ""
+
+msgid "Computers"
+msgstr ""
+
+msgid "Concerts"
+msgstr ""
+
+msgid "Cookbooks"
+msgstr ""
+
+msgid "Dance Clubs"
+msgstr ""
+
+msgid "Dental"
+msgstr ""
+
+msgid "Doctors"
+msgstr ""
+
+msgid "Education"
+msgstr ""
+
+msgid "Electronics"
+msgstr ""
+
+msgid "Employment"
+msgstr ""
+
+msgid "Engineering"
+msgstr ""
+
+msgid "Entertainment"
+msgstr ""
+
+msgid "Event"
+msgstr ""
+
+msgid "Exhibitions"
+msgstr ""
+
+msgid "Fashion"
+msgstr ""
+
+msgid "Festivals"
+msgstr ""
+
+msgid "Financial Services"
+msgstr ""
+
+msgid "Food"
+msgstr ""
+
+msgid "Furniture Stores"
+msgstr ""
+
+msgid "Games"
+msgstr ""
+
+msgid "Gifts Flowers"
+msgstr ""
+
+msgid "Government"
+msgstr ""
+
+msgid "Halloween"
+msgstr ""
+
+msgid "Health Medical"
+msgstr ""
+
+msgid "Home Services"
+msgstr ""
+
+msgid "Hotels"
+msgstr ""
+
+msgid "Industries"
+msgstr ""
+
+msgid "Internet"
+msgstr ""
+
+msgid "Jewelry"
+msgstr ""
+
+msgid "Jobs"
+msgstr ""
+
+msgid "Karaoke"
+msgstr ""
+
+msgid "Law"
+msgstr ""
+
+msgid "Lawn Garden"
+msgstr ""
+
+msgid "Libraries"
+msgstr ""
+
+msgid "Local Services"
+msgstr ""
+
+msgid "Lounges"
+msgstr ""
+
+msgid "Magazines"
+msgstr ""
+
+msgid "Manufacturing"
+msgstr ""
+
+msgid "Marker New"
+msgstr ""
+
+msgid "Mass Media"
+msgstr ""
+
+msgid "Massage Therapy"
+msgstr ""
+
+msgid "Matrimonial"
+msgstr ""
+
+msgid "Medical"
+msgstr ""
+
+msgid "Meetups"
+msgstr ""
+
+msgid "Miscellaneous For Sale"
+msgstr ""
+
+msgid "Mobile Phones"
+msgstr ""
+
+msgid "Movies"
+msgstr ""
+
+msgid "Museums"
+msgstr ""
+
+msgid "Musical Instruments"
+msgstr ""
+
+msgid "Musical"
+msgstr ""
+
+msgid "Nightlife"
+msgstr ""
+
+msgid "Parks"
+msgstr ""
+
+msgid "Parties"
+msgstr ""
+
+msgid "Pets"
+msgstr ""
+
+msgid "Photography"
+msgstr ""
+
+msgid "Pizza"
+msgstr ""
+
+msgid "Places"
+msgstr ""
+
+msgid "Play Schools"
+msgstr ""
+
+msgid "Playgrounds"
+msgstr ""
+
+msgid "Pool Halls"
+msgstr ""
+
+msgid "Printing Graphic Arts"
+msgstr ""
+
+msgid "Professional"
+msgstr ""
+
+msgid "Real Estate"
+msgstr ""
+
+msgid "Religious Organizations"
+msgstr ""
+
+msgid "Residential Places"
+msgstr ""
+
+msgid "Restaurants"
+msgstr ""
+
+msgid "Retail Stores"
+msgstr ""
+
+msgid "Saloon"
+msgstr ""
+
+msgid "Schools"
+msgstr ""
+
+msgid "Science"
+msgstr ""
+
+msgid "Shopping"
+msgstr ""
+
+msgid "Sporting Goods"
+msgstr ""
+
+msgid "Sports"
+msgstr ""
+
+msgid "Swimming Pools"
+msgstr ""
+
+msgid "Telemarketing"
+msgstr ""
+
+msgid "Tickets"
+msgstr ""
+
+msgid "Tiffin Services"
+msgstr ""
+
+msgid "Tires Accessories"
+msgstr ""
+
+msgid "Tools Hardware"
+msgstr ""
+
+msgid "Tours"
+msgstr ""
+
+msgid "Toys Store"
+msgstr ""
+
+msgid "Transport"
+msgstr ""
+
+msgid "Travel"
+msgstr ""
+
+msgid "Tutors"
+msgstr ""
+
+msgid "Vacant Land"
+msgstr ""
+
+msgid "Custom Marker Icon URL"
+msgstr ""
+
+msgid "Upload or enter URL for custom marker icon"
+msgstr ""
+
+msgid "Marker Icon Width"
+msgstr ""
+
+msgid "Width of marker icon in pixels (10-200)"
+msgstr ""
+
+msgid "Marker Icon Height"
+msgstr ""
+
+msgid "Height of marker icon in pixels (10-200)"
+msgstr ""
+
+msgid "Enable Markers for Custom Post Type"
+msgstr ""
+
+msgid "If enabled, all published posts of the chosen post type are added to the map as markers."
+msgstr ""
+
+msgid "Custom Post Type"
+msgstr ""
+
+msgid "Choose which Custom Post Type to display on the map (only if CPT markers is enabled)."
+msgstr ""
+
+msgid "Choose"
+msgstr ""
+
+msgid "Filter by Taxonomy"
+msgstr ""
+
+msgid "Choose which taxonomy to filter the posts by (leave on \"Choose\" for no taxonomy filter)."
+msgstr ""
+
+msgid "Taxonomy Terms"
+msgstr ""
+
+msgid "Comma-separated term slugs to filter by. Leave empty to include every term."
+msgstr ""
+
+msgid "Show Thumbnails"
+msgstr ""
+
+msgid "Display the featured image of each post inside its marker popup."
+msgstr ""
+
+msgid "Use Excerpt for Markers"
+msgstr ""
+
+msgid "Use the post excerpt as the popup content instead of the custom marker text."
+msgstr ""
+
+msgid "Show Read More Button"
+msgstr ""
+
+msgid "Display a Read More link inside the marker popup."
+msgstr ""
+
+msgid "Read More Text"
+msgstr ""
+
+msgid "Text used for the Read More link."
+msgstr ""
+
+msgid "Link Target"
+msgstr ""
+
+msgid "Where the post link and Read More link should open."
+msgstr ""
+
+msgid "New Tab"
+msgstr ""
+
+msgid "Same Tab"
+msgstr ""
+
+msgid "Display All Markers on Single Post Page"
+msgstr ""
+
+msgid "When viewing a single post of this CPT, show every marker instead of only the current post's marker."
+msgstr ""
+
+msgid "Show Markers Only"
+msgstr ""
+
+msgid "Display only markers without popup for the CPT markers."
+msgstr ""
+
+msgid "Map Settings"
+msgstr ""
+
+msgid "Map Controls"
+msgstr ""
+
+msgid "Default Marker Settings"
+msgstr ""
+
+msgid "Custom Post Type Markers"
+msgstr ""
+
+msgid "Pins"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Marker title displayed in the popup"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Popup content displayed below the title"
+msgstr ""
+
+msgid "Latitude"
+msgstr ""
+
+msgid "Marker latitude coordinate"
+msgstr ""
+
+msgid "Longitude"
+msgstr ""
+
+msgid "Marker longitude coordinate"
+msgstr ""
+
+msgid "Marker Icon"
+msgstr ""
+
+msgid "Choose marker icon"
+msgstr ""
+
+msgid "Custom Icon URL"
+msgstr ""
+
+msgid "Upload or enter URL for custom icon"
+msgstr ""
+
+msgid "Icon Width"
+msgstr ""
+
+msgid "Icon width in pixels (10-200)"
+msgstr ""
+
+msgid "Icon Height"
+msgstr ""
+
+msgid "Icon height in pixels (10-200)"
+msgstr ""
+
+msgid "Show Read More Link"
+msgstr ""
+
+msgid "Display read more link in popup"
+msgstr ""
+
+msgid "Text for read more link"
+msgstr ""
+
+msgid "Read More Link Class"
+msgstr ""
+
+msgid "Enter a custom CSS class for the Read More link."
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Marker"
+msgstr ""
+
+msgid "Read More"
+msgstr ""
+
+msgid "Lat:"
+msgstr ""
+
+msgid "Lng:"
+msgstr ""
+
+msgid "Zoom:"
+msgstr ""
+
+msgid "Preview unavailable in this browser session — the map renders on the frontend."
+msgstr ""
+

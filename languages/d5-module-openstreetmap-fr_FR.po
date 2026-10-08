@@ -1,0 +1,741 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Module OpenStreetMap for Divi 5 1.0.0\n"
+"Report-Msgid-Bugs-To: https://madeby.restezconnectes.fr/project/module-divi-openstreetmap/\n"
+"POT-Creation-Date: 2026-09-19 08:00+0000\n"
+"PO-Revision-Date: 2026-09-25 13:51+0200\n"
+"Last-Translator: Florent Maillefaud <contact@restezconnectes.fr>\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.9\n"
+"X-Domain: d5-module-openstreetmap\n"
+
+msgid "Read More..."
+msgstr "Lire la suite..."
+
+msgid "Search for places or addresses"
+msgstr "Rechercher un lieu ou une adresse"
+
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+msgid "OpenStreetMap Modules"
+msgstr "Modules OpenStreetMap"
+
+msgid "Pin"
+msgstr "Épingle"
+
+msgid "Map Height"
+msgstr "Hauteur de la carte"
+
+msgid "Height of the map container in pixels (80-1000px)"
+msgstr "Hauteur du conteneur de la carte en pixels (80-1000px)"
+
+msgid "Default Latitude"
+msgstr "Latitude par défaut"
+
+msgid "Default latitude for maps. You can get coordinates here: https://madeby.restezconnectes.fr/lieux-et-coordonnees/"
+msgstr "Latitude par défaut des cartes. Vous pouvez récupérer des coordonnées ici : https://madeby.restezconnectes.fr/lieux-et-coordonnees/"
+
+msgid "Default Longitude"
+msgstr "Longitude par défaut"
+
+msgid "Default longitude for maps. You can get coordinates here: https://madeby.restezconnectes.fr/lieux-et-coordonnees/"
+msgstr "Longitude par défaut des cartes. Vous pouvez récupérer des coordonnées ici : https://madeby.restezconnectes.fr/lieux-et-coordonnees/"
+
+msgid "Default Zoom"
+msgstr "Zoom par défaut"
+
+msgid "Default zoom level for maps (0-18)"
+msgstr "Niveau de zoom par défaut des cartes (0-18)"
+
+msgid "Base Layer"
+msgstr "Fond de carte"
+
+msgid "Choose the base map layer"
+msgstr "Choisissez le fond de carte"
+
+msgid "OpenStreetMap's Standard"
+msgstr "OpenStreetMap Standard"
+
+msgid "OpenStreetMap France"
+msgstr "OpenStreetMap France"
+
+msgid "Humanitarian map style"
+msgstr "Style humanitaire"
+
+msgid "Satellite"
+msgstr "Satellite"
+
+msgid "CyclOSM"
+msgstr "CyclOSM"
+
+msgid "Display Marker Info in Sidebar"
+msgstr "Afficher les infos du marqueur dans une barre latérale"
+
+msgid "Show marker content in a sliding sidebar panel instead of a popup bubble"
+msgstr "Afficher le contenu du marqueur dans un panneau latéral coulissant plutôt qu'une bulle"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+msgid "Sidebar Background Color"
+msgstr "Couleur de fond de la barre latérale"
+
+msgid "Background color of the marker sidebar (only used when \"Display Marker Info in Sidebar\" is enabled)."
+msgstr "Couleur de fond de la barre latérale des marqueurs (utilisée uniquement si « Afficher les infos du marqueur dans une barre latérale » est activé)."
+
+msgid "Sidebar Text Color"
+msgstr "Couleur du texte de la barre latérale"
+
+msgid "Text color of the marker content shown in the sidebar."
+msgstr "Couleur du texte du contenu du marqueur affiché dans la barre latérale."
+
+msgid "Read More Button Background Color"
+msgstr "Couleur de fond du bouton Lire la suite"
+
+msgid "Background color of the Read More button in the sidebar (replaces the plain Read More link shown in a popup)."
+msgstr "Couleur de fond du bouton « Lire la suite » dans la barre latérale (remplace le simple lien affiché dans une bulle)."
+
+msgid "Read More Button Border Color"
+msgstr "Couleur de bordure du bouton Lire la suite"
+
+msgid "Border color of the Read More button in the sidebar."
+msgstr "Couleur de bordure du bouton « Lire la suite » dans la barre latérale."
+
+msgid "Read More Button Text Color"
+msgstr "Couleur du texte du bouton Lire la suite"
+
+msgid "Read More Button Border Width"
+msgstr "Épaisseur de bordure du bouton Lire la suite"
+
+msgid "Border thickness of the Read More button in the sidebar, in pixels (0 for no border)."
+msgstr "Épaisseur de la bordure du bouton « Lire la suite » dans la barre latérale, en pixels (0 pour aucune bordure)."
+
+msgid "Overrides the map's Read More button border thickness for this pin only, in pixels. Leave empty to use the map's setting."
+msgstr "Remplace l'épaisseur de bordure du bouton « Lire la suite » de la carte pour ce pin uniquement, en pixels. Laisser vide pour utiliser celle de la carte."
+
+msgid "Text color of the Read More button in the sidebar."
+msgstr "Couleur du texte du bouton « Lire la suite » dans la barre latérale."
+
+msgid "Overrides the map's sidebar background color for this pin only. Leave empty to use the map's setting."
+msgstr "Remplace la couleur de fond de la barre latérale de la carte pour ce pin uniquement. Laisser vide pour utiliser celle de la carte."
+
+msgid "Overrides the map's sidebar text color for this pin only. Leave empty to use the map's setting."
+msgstr "Remplace la couleur du texte de la barre latérale de la carte pour ce pin uniquement. Laisser vide pour utiliser celle de la carte."
+
+msgid "Overrides the map's Read More button background color for this pin only. Leave empty to use the map's setting."
+msgstr "Remplace la couleur de fond du bouton « Lire la suite » de la carte pour ce pin uniquement. Laisser vide pour utiliser celle de la carte."
+
+msgid "Overrides the map's Read More button border color for this pin only. Leave empty to use the map's setting."
+msgstr "Remplace la couleur de bordure du bouton « Lire la suite » de la carte pour ce pin uniquement. Laisser vide pour utiliser celle de la carte."
+
+msgid "Overrides the map's Read More button text color for this pin only. Leave empty to use the map's setting."
+msgstr "Remplace la couleur du texte du bouton « Lire la suite » de la carte pour ce pin uniquement. Laisser vide pour utiliser celle de la carte."
+
+msgid "Show Zoom Controls"
+msgstr "Afficher les contrôles de zoom"
+
+msgid "Display zoom control buttons on the map"
+msgstr "Afficher les boutons de zoom sur la carte"
+
+msgid "Scroll Wheel Zoom"
+msgstr "Zoom à la molette"
+
+msgid "Enable zoom with mouse scroll wheel"
+msgstr "Activer le zoom avec la molette de la souris"
+
+msgid "Double Click Zoom"
+msgstr "Zoom au double-clic"
+
+msgid "Enable zoom with double click"
+msgstr "Activer le zoom par double-clic"
+
+msgid "Minimum Zoom"
+msgstr "Zoom minimum"
+
+msgid "Minimum zoom level (0-18)"
+msgstr "Niveau de zoom minimum (0-18)"
+
+msgid "Maximum Zoom"
+msgstr "Zoom maximum"
+
+msgid "Maximum zoom level (0-18)"
+msgstr "Niveau de zoom maximum (0-18)"
+
+msgid "Fit Markers"
+msgstr "Ajuster aux marqueurs"
+
+msgid "Automatically adjust map view to fit all markers"
+msgstr "Ajuster automatiquement la vue pour englober tous les marqueurs"
+
+msgid "Display Base Layers Control"
+msgstr "Afficher le sélecteur de fonds de carte"
+
+msgid "Show layer switcher control"
+msgstr "Afficher le contrôle de changement de calque"
+
+msgid "Display Search"
+msgstr "Afficher la recherche"
+
+msgid "Show geocoding search control"
+msgstr "Afficher le contrôle de recherche géographique"
+
+msgid "Search Marker Color"
+msgstr "Couleur du marqueur de recherche"
+
+msgid "Color"
+msgstr "Couleur"
+
+msgid "Display MiniMap"
+msgstr "Afficher la mini-carte"
+
+msgid "Show minimap control"
+msgstr "Afficher le contrôle de mini-carte"
+
+msgid "Geolocate User"
+msgstr "Géolocaliser l'utilisateur"
+
+msgid "Show user geolocation control"
+msgstr "Afficher le contrôle de géolocalisation"
+
+msgid "Display Home Button"
+msgstr "Afficher le bouton d'accueil"
+
+msgid "Show a button that resets the map to its initial position and zoom"
+msgstr "Afficher un bouton qui réinitialise la carte à sa position et son zoom initiaux"
+
+msgid "Reset view"
+msgstr "Réinitialiser la vue"
+
+msgid "Locate me"
+msgstr "Me géolocaliser"
+
+msgid "Location access denied."
+msgstr "Accès à la position refusé."
+
+msgid "Search a place to fill in coordinates…"
+msgstr "Rechercher un lieu pour remplir les coordonnées…"
+
+msgid "Open this pin's settings panel first, then pick a search result."
+msgstr "Ouvrez d'abord le panneau de réglages de ce pin, puis choisissez un résultat de recherche."
+
+msgid "Could not find coordinates for that place."
+msgstr "Impossible de trouver les coordonnées de ce lieu."
+
+msgid "Search Location"
+msgstr "Rechercher un lieu"
+
+msgid "Search a place to fill in the Latitude/Longitude fields below."
+msgstr "Recherchez un lieu pour remplir automatiquement les champs Latitude/Longitude ci-dessous."
+
+msgid "Zoom in"
+msgstr "Zoomer"
+
+msgid "Zoom out"
+msgstr "Dézoomer"
+
+msgid "Default Marker Icon"
+msgstr "Icône de marqueur par défaut"
+
+msgid "Choose default marker icon"
+msgstr "Choisissez l'icône de marqueur par défaut"
+
+msgid "Default"
+msgstr "Défaut"
+
+msgid "Accountancy"
+msgstr "Comptabilité"
+
+msgid "Arts Crafts"
+msgstr "Artisanat"
+
+msgid "Astrology"
+msgstr "Astrologie"
+
+msgid "Automotive"
+msgstr "Automobile"
+
+msgid "Bars"
+msgstr "Bars"
+
+msgid "Birds"
+msgstr "Oiseaux"
+
+msgid "Books Media"
+msgstr "Livres et médias"
+
+msgid "Breakfast & Brunch"
+msgstr "Petit-déjeuner et brunch"
+
+msgid "Business"
+msgstr "Entreprises"
+
+msgid "Cake Shop"
+msgstr "Pâtisserie"
+
+msgid "Clothings"
+msgstr "Vêtements"
+
+msgid "Clubs"
+msgstr "Clubs"
+
+msgid "Coffee & Tea"
+msgstr "Café et thé"
+
+msgid "Commercial Places"
+msgstr "Lieux commerciaux"
+
+msgid "Community"
+msgstr "Communauté"
+
+msgid "Computers"
+msgstr "Informatique"
+
+msgid "Concerts"
+msgstr "Concerts"
+
+msgid "Cookbooks"
+msgstr "Livres de cuisine"
+
+msgid "Dance Clubs"
+msgstr "Boîtes de nuit"
+
+msgid "Dental"
+msgstr "Dentaire"
+
+msgid "Doctors"
+msgstr "Médecins"
+
+msgid "Education"
+msgstr "Éducation"
+
+msgid "Electronics"
+msgstr "Électronique"
+
+msgid "Employment"
+msgstr "Emploi"
+
+msgid "Engineering"
+msgstr "Ingénierie"
+
+msgid "Entertainment"
+msgstr "Divertissement"
+
+msgid "Event"
+msgstr "Événement"
+
+msgid "Exhibitions"
+msgstr "Expositions"
+
+msgid "Fashion"
+msgstr "Mode"
+
+msgid "Festivals"
+msgstr "Festivals"
+
+msgid "Financial Services"
+msgstr "Services financiers"
+
+msgid "Food"
+msgstr "Alimentation"
+
+msgid "Furniture Stores"
+msgstr "Magasins de meubles"
+
+msgid "Games"
+msgstr "Jeux"
+
+msgid "Gifts Flowers"
+msgstr "Cadeaux et fleurs"
+
+msgid "Government"
+msgstr "Administration"
+
+msgid "Halloween"
+msgstr "Halloween"
+
+msgid "Health Medical"
+msgstr "Santé"
+
+msgid "Home Services"
+msgstr "Services à domicile"
+
+msgid "Hotels"
+msgstr "Hôtels"
+
+msgid "Industries"
+msgstr "Industries"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "Jewelry"
+msgstr "Bijouterie"
+
+msgid "Jobs"
+msgstr "Emplois"
+
+msgid "Karaoke"
+msgstr "Karaoké"
+
+msgid "Law"
+msgstr "Droit"
+
+msgid "Lawn Garden"
+msgstr "Jardinage"
+
+msgid "Libraries"
+msgstr "Bibliothèques"
+
+msgid "Local Services"
+msgstr "Services locaux"
+
+msgid "Lounges"
+msgstr "Bars lounge"
+
+msgid "Magazines"
+msgstr "Magazines"
+
+msgid "Manufacturing"
+msgstr "Industrie manufacturière"
+
+msgid "Marker New"
+msgstr "Nouveau marqueur"
+
+msgid "Mass Media"
+msgstr "Médias"
+
+msgid "Massage Therapy"
+msgstr "Massage"
+
+msgid "Matrimonial"
+msgstr "Mariage"
+
+msgid "Medical"
+msgstr "Médical"
+
+msgid "Meetups"
+msgstr "Rencontres"
+
+msgid "Miscellaneous For Sale"
+msgstr "Divers à vendre"
+
+msgid "Mobile Phones"
+msgstr "Téléphonie mobile"
+
+msgid "Movies"
+msgstr "Cinéma"
+
+msgid "Museums"
+msgstr "Musées"
+
+msgid "Musical Instruments"
+msgstr "Instruments de musique"
+
+msgid "Musical"
+msgstr "Musique"
+
+msgid "Nightlife"
+msgstr "Vie nocturne"
+
+msgid "Parks"
+msgstr "Parcs"
+
+msgid "Parties"
+msgstr "Fêtes"
+
+msgid "Pets"
+msgstr "Animaux"
+
+msgid "Photography"
+msgstr "Photographie"
+
+msgid "Pizza"
+msgstr "Pizza"
+
+msgid "Places"
+msgstr "Lieux"
+
+msgid "Play Schools"
+msgstr "Écoles maternelles"
+
+msgid "Playgrounds"
+msgstr "Aires de jeux"
+
+msgid "Pool Halls"
+msgstr "Salles de billard"
+
+msgid "Printing Graphic Arts"
+msgstr "Imprimerie et arts graphiques"
+
+msgid "Professional"
+msgstr "Professionnel"
+
+msgid "Real Estate"
+msgstr "Immobilier"
+
+msgid "Religious Organizations"
+msgstr "Organisations religieuses"
+
+msgid "Residential Places"
+msgstr "Lieux résidentiels"
+
+msgid "Restaurants"
+msgstr "Restaurants"
+
+msgid "Retail Stores"
+msgstr "Commerces de détail"
+
+msgid "Saloon"
+msgstr "Salon de coiffure"
+
+msgid "Schools"
+msgstr "Écoles"
+
+msgid "Science"
+msgstr "Science"
+
+msgid "Shopping"
+msgstr "Shopping"
+
+msgid "Sporting Goods"
+msgstr "Articles de sport"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Swimming Pools"
+msgstr "Piscines"
+
+msgid "Telemarketing"
+msgstr "Télémarketing"
+
+msgid "Tickets"
+msgstr "Billetterie"
+
+msgid "Tiffin Services"
+msgstr "Livraison de repas"
+
+msgid "Tires Accessories"
+msgstr "Pneus et accessoires"
+
+msgid "Tools Hardware"
+msgstr "Outillage"
+
+msgid "Tours"
+msgstr "Visites guidées"
+
+msgid "Toys Store"
+msgstr "Magasin de jouets"
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Travel"
+msgstr "Voyage"
+
+msgid "Tutors"
+msgstr "Cours particuliers"
+
+msgid "Vacant Land"
+msgstr "Terrain vacant"
+
+msgid "Custom Marker Icon URL"
+msgstr "URL d'icône de marqueur personnalisée"
+
+msgid "Upload or enter URL for custom marker icon"
+msgstr "Téléversez ou saisissez une URL pour une icône de marqueur personnalisée"
+
+msgid "Marker Icon Width"
+msgstr "Largeur de l'icône du marqueur"
+
+msgid "Width of marker icon in pixels (10-200)"
+msgstr "Largeur de l'icône du marqueur en pixels (10-200)"
+
+msgid "Marker Icon Height"
+msgstr "Hauteur de l'icône du marqueur"
+
+msgid "Height of marker icon in pixels (10-200)"
+msgstr "Hauteur de l'icône du marqueur en pixels (10-200)"
+
+msgid "Enable Markers for Custom Post Type"
+msgstr "Activer les CPT"
+
+msgid "If enabled, all published posts of the chosen post type are added to the map as markers."
+msgstr "Si activé, toutes les publications publiées du type de contenu choisi sont ajoutées à la carte sous forme de marqueurs."
+
+msgid "Custom Post Type"
+msgstr "Type de contenu personnalisé"
+
+msgid "Choose which Custom Post Type to display on the map (only if CPT markers is enabled)."
+msgstr "Choisissez le CPTà afficher sur la carte (uniquement si les marqueurs CPT sont activés)."
+
+msgid "Choose"
+msgstr "Choisir"
+
+msgid "Filter by Taxonomy"
+msgstr "Filtrer par taxonomie"
+
+msgid "Choose which taxonomy to filter the posts by (leave on \"Choose\" for no taxonomy filter)."
+msgstr "Choisissez la taxonomie utilisée pour filtrer les publications (laisser sur « Choisir » pour ne pas filtrer)."
+
+msgid "Taxonomy Terms"
+msgstr "Termes de taxonomie"
+
+msgid "Comma-separated term slugs to filter by. Leave empty to include every term."
+msgstr "Slugs des termes à filtrer, séparés par des virgules. Laisser vide pour inclure tous les termes."
+
+msgid "Show Thumbnails"
+msgstr "Afficher les miniatures"
+
+msgid "Display the featured image of each post inside its marker popup."
+msgstr "Afficher l'image mise en avant de chaque publication dans sa bulle de marqueur."
+
+msgid "Use Excerpt for Markers"
+msgstr "Utiliser l'extrait pour les marqueurs"
+
+msgid "Use the post excerpt as the popup content instead of the custom marker text."
+msgstr "Utiliser l'extrait de la publication comme contenu de la bulle, à la place du texte personnalisé du marqueur."
+
+msgid "Show Read More Button"
+msgstr "Afficher le bouton Lire la suite"
+
+msgid "Display a Read More link inside the marker popup."
+msgstr "Afficher un lien « Lire la suite » dans la bulle du marqueur."
+
+msgid "Read More Text"
+msgstr "Texte du lien Lire la suite"
+
+msgid "Text used for the Read More link."
+msgstr "Texte utilisé pour le lien « Lire la suite »."
+
+msgid "Read More Link Class"
+msgstr "Classe CSS du lien Lire la suite"
+
+msgid "Enter a custom CSS class for the Read More link."
+msgstr "Saisissez une classe CSS personnalisée pour le lien « Lire la suite »."
+
+msgid "Link Target"
+msgstr "Cible du lien"
+
+msgid "Where the post link and Read More link should open."
+msgstr "Endroit où doivent s'ouvrir le lien de la publication et le lien « Lire la suite »."
+
+msgid "New Tab"
+msgstr "Nouvel onglet"
+
+msgid "Same Tab"
+msgstr "Même onglet"
+
+msgid "Display All Markers on Single Post Page"
+msgstr "Afficher tous les marqueurs sur la page d'une publication"
+
+msgid "When viewing a single post of this CPT, show every marker instead of only the current post's marker."
+msgstr "Lors de l'affichage d'une publication de ce type, afficher tous les marqueurs au lieu du seul marqueur de la publication en cours."
+
+msgid "Show Markers Only"
+msgstr "Afficher uniquement les marqueurs"
+
+msgid "Display only markers without popup for the CPT markers."
+msgstr "Afficher uniquement les marqueurs sans bulle pour les marqueurs CPT."
+
+msgid "Map Settings"
+msgstr "Réglages de la carte"
+
+msgid "Map Controls"
+msgstr "Contrôles de la carte"
+
+msgid "Default Marker Settings"
+msgstr "Réglages du marqueur par défaut"
+
+msgid "Custom Post Type Markers"
+msgstr "Marqueurs CPT"
+
+msgid "Pins"
+msgstr "Épingles"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Marker title displayed in the popup"
+msgstr "Titre du marqueur affiché dans la bulle"
+
+msgid "Content"
+msgstr "Contenu"
+
+msgid "Popup content displayed below the title"
+msgstr "Contenu de la bulle affiché sous le titre"
+
+msgid "Latitude"
+msgstr "Latitude"
+
+msgid "Marker latitude coordinate"
+msgstr "Coordonnée de latitude du marqueur"
+
+msgid "Longitude"
+msgstr "Longitude"
+
+msgid "Marker longitude coordinate"
+msgstr "Coordonnée de longitude du marqueur"
+
+msgid "Marker Icon"
+msgstr "Icône du marqueur"
+
+msgid "Choose marker icon"
+msgstr "Choisissez l'icône du marqueur"
+
+msgid "Custom Icon URL"
+msgstr "URL d'icône personnalisée"
+
+msgid "Upload or enter URL for custom icon"
+msgstr "Téléversez ou saisissez une URL pour une icône personnalisée"
+
+msgid "Icon Width"
+msgstr "Largeur de l'icône"
+
+msgid "Icon width in pixels (10-200)"
+msgstr "Largeur de l'icône en pixels (10-200)"
+
+msgid "Icon Height"
+msgstr "Hauteur de l'icône"
+
+msgid "Icon height in pixels (10-200)"
+msgstr "Hauteur de l'icône en pixels (10-200)"
+
+msgid "Show Read More Link"
+msgstr "Afficher le lien Lire la suite"
+
+msgid "Display read more link in popup"
+msgstr "Afficher le lien « Lire la suite » dans la bulle"
+
+msgid "Text for read more link"
+msgstr "Texte du lien « Lire la suite »"
+
+msgid "Location"
+msgstr "Emplacement"
+
+msgid "Marker"
+msgstr "Marqueur"
+
+msgid "Read More"
+msgstr "Lire la suite"
+
+msgid "Lat:"
+msgstr "Lat :"
+
+msgid "Lng:"
+msgstr "Lng :"
+
+msgid "Zoom:"
+msgstr "Zoom :"
+
+msgid "Preview unavailable in this browser session — the map renders on the frontend."
+msgstr "Aperçu indisponible dans cette session du navigateur — la carte s'affiche sur le site publié."

@@ -1,0 +1,23 @@
+{
+  "d4Shortcode": "dimo_openstreetmap_module_pin",
+  "module": {
+    "content": "pinContent.innerContent.*",
+    "pin_marker_title": "pinTitle.innerContent.*",
+    "pin_address_lat": "pinLatitude.innerContent.*",
+    "pin_address_lng": "pinLongitude.innerContent.*",
+    "pin_marker_icon": "pinIcon.innerContent.*",
+    "pin_marker_icon_url": "pinIconUrl.innerContent.*",
+    "pin_marker_icon_width": "pinIconWidth.innerContent.*",
+    "pin_marker_icon_height": "pinIconHeight.innerContent.*",
+    "show_readmore": "showReadMore.innerContent.*",
+    "readmore_text": "readMoreText.innerContent.*"
+  },
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "link_options": "module.advanced.link"
+  },
+  "css": {},
+  "valueExpansionFunctionMap": {
+    "show_readmore": "convertOnOff"
+  }
+}

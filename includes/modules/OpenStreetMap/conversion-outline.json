@@ -1,0 +1,57 @@
+{
+  "d4Shortcode": "dimo_openstreetmap_module",
+  "module": {
+    "map_height": "mapHeight.innerContent.*",
+    "latitude": "latitude.innerContent.*",
+    "longitude": "longitude.innerContent.*",
+    "zoom": "zoom.innerContent.*",
+    "base_layer": "baseLayer.innerContent.*",
+    "show_zoom_controls": "showZoomControls.innerContent.*",
+    "scroll_wheel_zoom": "scrollWheelZoom.innerContent.*",
+    "double_click_zoom": "doubleClickZoom.innerContent.*",
+    "min_zoom": "minZoom.innerContent.*",
+    "max_zoom": "maxZoom.innerContent.*",
+    "fit_markers": "fitMarkers.innerContent.*",
+    "control_layers": "controlLayers.innerContent.*",
+    "display_search": "displaySearch.innerContent.*",
+    "display_minimap": "displayMinimap.innerContent.*",
+    "display_location": "displayLocation.innerContent.*",
+    "pin_marker_icon": "defaultMarkerIcon.innerContent.*",
+    "pin_marker_icon_url": "defaultMarkerIconUrl.innerContent.*",
+    "pin_marker_icon_width": "defaultMarkerIconWidth.innerContent.*",
+    "pin_marker_icon_height": "defaultMarkerIconHeight.innerContent.*",
+    "thumb_markers": "thumbMarkers.innerContent.*",
+    "show_markers_only": "showMarkersOnly.innerContent.*"
+  },
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "background": "module.decoration.background",
+    "disabled_on": "module.decoration.disabledOn",
+    "margin_padding": "module.decoration.spacing",
+    "animation": "module.decoration.animation",
+    "transform": "module.decoration.transform",
+    "module": "module.advanced.htmlAttributes",
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "css": {},
+  "valueExpansionFunctionMap": {
+    "show_zoom_controls": "convertOnOff",
+    "scroll_wheel_zoom": "convertOnOff",
+    "double_click_zoom": "convertOnOff",
+    "fit_markers": "convertOnOff",
+    "control_layers": "convertOnOff",
+    "display_search": "convertOnOff",
+    "display_minimap": "convertOnOff",
+    "display_location": "convertOnOff",
+    "thumb_markers": "convertOnOff",
+    "show_markers_only": "convertOnOff"
+  }
+}
